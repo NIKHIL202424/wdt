@@ -1,0 +1,159 @@
+body{
+    background-color: rgb(0, 0, 0);
+}
+.shreya{
+    width: 200%;
+    height: 300px;
+    display: flex;
+    align-content: center;
+    
+}
+.nikhil{
+    display: flex;
+    justify-content:left;
+    background-color: rgb(255, 255, 255);
+    margin-right: 10px;
+    color: #70d2ff;
+    
+}
+
+.header {
+    background-image: url('journey.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* You can adjust the height as needed */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.nikhil nav {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+}
+
+.nikhil nav h1 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+
+.nikhil nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.nikhil nav a:hover {
+    text-decoration: underline;
+}
+
+
+.nikhil input[type="search"] {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.nikhil button[type="search"] {
+    padding: 10px;
+    margin-left: 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.nikhil button[type="search"]:hover {
+    background-color: #0056b3;
+}
+#main{
+    background-color: rgb(254, 254, 254);
+}
+
+
+
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+   
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.product-card:hover {
+    transform: translateY(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.product-image {
+    width: 180px;;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.product-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+
+.product-price {
+    font-size: 1.1em;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+
+.add-to-cart {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+footer{
+    color: #fcf9f9;
+    text-align: center;
+    background-color:#333;
+    padding: 20px;
+    margin: 30px;
+}
+H3{
+    color: #ccc;
+    text-align: center;
+    text-shadow: #ccc;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

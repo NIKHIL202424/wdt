@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login at Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <div class="box1">
+        <h1 class="NIK">LOGIN AT JOURNEY 🛒</h1>
+        <p>🛒 The shopping website</p>
+    </div>
+
+    <div class="box2">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <label for="phoneNumber">Phone Number:</label><br>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
+            
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            
+            <button type="submit">LOGIN</button>
+        </form>
+    </div>
+    <script>
+        function handleLogin(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const phoneNumber = document.getElementById('phoneNumber').value.trim();
+    const password = document.getElementById('password').value;
+
+    if (!phoneNumber || !password) {
+        alert('Both fields are required. Please fill in the details.');
+        return;
+    }
+
+    // Retrieve existing users from localStorage
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Check if the phone number and password match an existing user
+    const validUser = users.find(
+        user => user.phoneNumber === phoneNumber && user.password === password
+    );
+
+    if (validUser) {
+        alert(`Welcome back, ${validUser.firstName}!`);
+        // Redirect to the homepage or user dashboard
+        window.location.href = 'index3.html';
+    } else {
+        alert('Invalid phone number or password. Redirecting to the signup page.');
+        // Redirect to the signup page
+        window.location.href = 'index.html';
+    }
+}
+
+    </script>
+</body>
+</html>

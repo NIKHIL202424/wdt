@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    
+  }
+  
+  /* Set a background color and font styles for the entire body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  /* Styling for box1, which contains the title */
+  .box1 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  /* Style the heading */
+  .m {
+    font-size: 36px;
+    color: #333;
+  }
+  
+  /* Styling for box2 where the form is located */
+  .box2 {
+    background-color: #ebe1c8d3;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    font-size: larger;
+  }
+  
+  /* Style the paragraph text above the form */
+  .box2 p {
+    font-size: 14px;
+    color: #0d0d0d;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the 'Sign up' link */
+  .box2 a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .box2 a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form labels */
+  label {
+    font-size: 14px;
+    color: #000000;
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  /* Form input fields */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+  }
+  
+  /* Focused input field */
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  /* Button styling */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f21212;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for the button */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Extra small space for the submit button */
+  .nik {
+    margin-top: 10px;
+  }
+  body{
+    background-color: rgb(240, 134, 198);
+    
+   width: auto;
+  background-repeat:repeat ;
+    width: auto;
+  height: auto;
+  }
+  h1{
+    color: #eee9e9;
+    background-color: #020202;
+  }
+  .NIK{
+    color: #f0f0f0;
+  }
+  body{
+   
+    background-image: url('https://static.vecteezy.com/system/resources/previews/033/501/763/non_2x/laptop-with-blue-smoke-on-a-black-background-ai-generated-free-photo.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  background-position: center;
+  }

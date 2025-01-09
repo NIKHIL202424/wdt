@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUY NOW PAGE</title>
+    <style>
+        .delivery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(47, 246, 226);
+            width: 500px;
+            height: 800px;
+            text-align: center;
+            margin: auto;
+        }
+        .delivery h3 {
+            background-color: antiquewhite;
+            color: brown;
+        }
+        button {
+            background-color: blue;
+            padding: 10px;
+            margin: 10px;
+            color: antiquewhite;
+            border-radius: 30px;
+            box-sizing: border-box;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: red;
+            color: antiquewhite;
+        }
+        body {
+            background-image: url(https://thumbs.dreamstime.com/z/d-rendering-delivery-service-motorcycle-logistic-food-moto-scooter-driver-brown-box-265180010.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        h1 {
+            font-family: cursive;
+            background-color: #070707;
+            color: aliceblue;
+            text-align: center;
+        }
+        input, select {
+            width: 90%;
+            padding: 10px;
+            font-size: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        label {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DELIVERY ADDRESS📦📦:</h1>
+    <div class="delivery">
+        <form name="deliveryForm" onsubmit="return validateForm()">
+            <label>FULL NAME:</label><br>
+            <input type="text" name="name" placeholder="NAME" required><br>
+            <label>ADDRESS:</label><br>
+            <input type="text" name="address" placeholder="ADDRESS" required><br>
+            <label>NUMBER:</label><br>
+            <input type="number" name="number" placeholder="MOBILE" required><br>
+            <label>PIN CODE:</label><br>
+            <input type="number" name="pin" placeholder="PINCODE" required><br>
+
+            <label for="payment">Payment Method:</label><br>
+            <select id="payment" name="payment" required>
+                <option value="">Select a payment method</option>
+                <option value="credit-card">Credit Card</option>
+                <option value="debit-card">Debit Card</option>
+            </select><br><br>
+
+            <label>CVV NUMBER:</label><br>
+            <input type="number" name="cvv" placeholder="CVV NUMBER" required><br>
+
+            <label>EXPIRY DATE:</label><br>
+            <input type="date" name="expiry" required><br><br>
+
+            <h3>: OTHERWISE PAYMENT METHOD IS BY DEFAULT CASH ON DELIVERY:</h3>
+
+            <button type="submit">CONFIRM ORDER</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Get form values
+            var name = document.forms["deliveryForm"]["name"].value;
+            var address = document.forms["deliveryForm"]["address"].value;
+            var number = document.forms["deliveryForm"]["number"].value;
+            var pin = document.forms["deliveryForm"]["pin"].value;
+            var paymentMethod = document.forms["deliveryForm"]["payment"].value;
+            var cvv = document.forms["deliveryForm"]["cvv"].value;
+            var expiryDate = document.forms["deliveryForm"]["expiry"].value;
+
+            // Check if all fields are filled
+            if (name == "" || address == "" || number == "" || pin == "" || paymentMethod == "" || cvv == "" || expiryDate == "") {
+                alert("Please fill out all the required fields.");
+                return false;
+            }
+
+            // Check if CVV and PIN are valid numbers
+            if (isNaN(cvv) || isNaN(pin)) {
+                alert("CVV and PIN code must be numbers.");
+                return false;
+            }
+
+            // Show the Payment Successful pop-up
+            alert("Payment Successful!");
+
+            // Redirect to the "thanksmobile.html" page after 3 seconds
+            setTimeout(function() {
+                window.location.href = "t shirt.html";
+            }, 3000);
+
+            // Prevent form submission (so the page doesn't reload)
+            return false;
+        }
+    </script>
+</body>
+</html>

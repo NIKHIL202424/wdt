@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up at Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="box1">
+        <h1 class="NIK">
+            SIGN UP AT JOURNEY 🛒
+        </h1>
+        <p>🛒 The shopping website</p> 
+    </div>
+
+    <div class="box2">
+        <p>Already have an account? <a href="index2.html">Login</a></p>
+        <form id="signupForm" onsubmit="handleSignUp(event)">
+            <label for="firstName">First Name*:</label><br>
+            <input type="text" id="firstName" name="firstName" required><br>
+            
+            <label for="lastName">Last Name*:</label><br>
+            <input type="text" id="lastName" name="lastName" required><br>
+            
+            <label for="phoneNumber">Number*:</label><br>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
+            
+            <label for="password">Password*:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            
+            <a href="index3.html"><button>SUBMIT</button></a>
+            
+        </form>
+    </div>
+
+    <script>
+        // JavaScript for Sign-Up Page
+        function handleSignUp(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const password = document.getElementById('password').value;
+    
+            if (!firstName || !lastName || !phoneNumber || !password) {
+                alert('All fields are required. Please fill in all the fields.');
+                return;
+            }
+    
+            if (phoneNumber.length < 10) {
+                alert('Phone number must be at least 10 digits long.');
+                return;
+            }
+    
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long.');
+                return;
+            }
+    
+            
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+    
+            
+            const userExists = users.some(user => user.phoneNumber === phoneNumber);
+            if (userExists) {
+                alert('A user with this phone number already exists.');
+                return;
+            }
+    
+            
+            const newUser = {
+                firstName: firstName,
+                lastName: lastName,
+                phoneNumber: phoneNumber,
+                password: password 
+            };
+    
+            users.push(newUser);
+    
+            
+            localStorage.setItem('users', JSON.stringify(users));
+    
+            alert(`Welcome to Journey, ${firstName}! Your sign-up is successful.`);
+            window.location.href = 'index2.html'; 
+        }
+    </script>
+    
+</body>
+</html>

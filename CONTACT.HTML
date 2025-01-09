@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <style>
+        .main {
+            background-color: beige;
+            background-size: 50%;
+        }
+        button {
+            margin: 0;
+            padding: 10px;
+            background-color: rgb(154, 206, 248);
+            text-shadow: 10px;
+            border: 3px;
+            border-radius: 10px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .pre {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .main {
+            background-image: url(https://static1.bigstockphoto.com/0/0/3/large1500/300814840.jpg);
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: white;
+        }
+        input[type="email"],
+        input[type="number"],
+        input[type="name"],
+        textarea {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #3291e9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ee0e25;
+        }
+    </style>
+</head>
+<body>
+    <div class="pre">
+        <img src="CONTACT.jpg" width="300px" height="150px" alt="">
+    </div>
+    <div class="main">
+        <form id="feedbackForm">
+            <label> EMAIL:</label><br>
+            <input type="email" name="email" placeholder="EMAIL" required><br>
+            <label> NUMBER:</label><br>
+            <input type="number" name="number" placeholder="NUMBER" required><br>
+            <label> NAME:</label><br>
+            <input type="name" name="name" placeholder="NAME" required><br>
+            <label>WRITE HERE:</label><br>
+            <textarea name="queries" id="QUERIES" rows="5" placeholder="WRITE YOUR QUERIES" required></textarea><br>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+    <script>
+        // Event listener for form submission
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            // Show the thanks message after submission
+            alert("Thanks for your opinion, our team will contact you shortly.");
+
+            // Optionally, you can reset the form after submission
+            document.getElementById("feedbackForm").reset();
+
+            // Redirect to index3.html after 3 seconds
+            setTimeout(function() {
+                window.location.href = "index3.html";
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

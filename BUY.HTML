@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUY NOW PAGE</title>
+</head>
+<style>
+.delivery{
+    align-items: first baseline;
+    justify-content: center;
+    size: 25%;
+    background-color: rgb(47, 246, 226);
+    width: 500px;
+    height: 600px;
+    text-align: center;
+    
+}
+.delivery h3{
+    background-color: antiquewhite;
+    color: brown;
+}
+button{
+    background-color: blue;
+    padding: 10px;
+    margin: 10px;
+    color: antiquewhite;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-size: 30px;
+    align-self: center;
+    
+}
+button:hover{
+    background-color: red;
+    color: antiquewhite;
+}
+body{
+    background-image: url(https://thumbs.dreamstime.com/z/d-rendering-delivery-service-motorcycle-logistic-food-moto-scooter-driver-brown-box-265180010.jpg);
+    background-repeat: no-repeat;
+    
+}
+h1{
+    font-family: cursive;
+    background-color: #070707;
+    color: aliceblue;
+    text-align: center;
+    
+}
+input{
+    width: 90%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    
+}
+label{
+    font-size: 25px;
+}
+</style>
+<body>
+    <h1>DELIVERY ADDRESS📦📦:</h1>
+    <div class="delivery">
+    <label> FULL NAME       :</label><br>
+<input type="text" name="name" placeholder="NAME" required><br>
+<label>ADDRESS:</label><br>
+<input type="text" name="address" placeholder="ADDRESS" required><br>
+<label>NUMBER :</label><br>
+<input type="number" name="number" placeholder="MOBILE" required><br>
+<label>PIN CODE       :</label><br>
+<input type="number" name="number" placeholder="PINCODE" required><br>
+<label for="payment">Payment Method:</label>
+<select id="payment" name="payment" required>
+    <option value="credit-card">Credit Card</option>
+    
+    <option value="debit-card">Debit Card</option>
+    <option value="cash on delivery">CASH ON DELIVERY</option>
+    <label>CVV NUMBER:</label>
+    <input type="number" name="number" placeholder="CVV NUMBER" >
+    <label>EXPIRY DATE:</label>
+    <input type="date" value="date" placeholder="EXPIRY DATE">
+    
+</select><br><br>
+
+
+<h3>: OTHERWISE,PAYMENT METHOD IS BY DEFAULT CASH ON DELIVERY:</h3>
+<button>CONFIRM ORDER</button><br>
+    </div>
+    <script>
+        const paymentSelect = document.getElementById('payment');
+        const cvvInput = document.getElementById('cvv');
+        const expiryDateInput = document.getElementById('expiry-date');
+
+        paymentSelect.addEventListener('change', () => {
+            if (paymentSelect.value === 'cash-on-delivery') {
+                cvvInput.disabled = true;
+                expiryDateInput.disabled = true;
+            } else {
+                cvvInput.disabled = false;
+                expiryDateInput.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
